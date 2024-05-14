@@ -1,29 +1,53 @@
-# the-graph-network-query-example
-A set of example code to showcase how to query The Graph Network 
+# The Graph Network Example Code to Query Subgraphs
 
+This repository contains examples of how to query The Graph Network on Arbitrum using different programming languages and libraries.
 
-This repository contains a set of code that serves as an example of how to query the Graph network.
+⚠️ This is a work-in-progress and may be updated to complete some of the unfinished and incomplete code. It is an ongoing development of example code to showcase how to query The Graph Network.
 
-### Overview
-The code in this repository demonstrates how to interact with the Graph network by performing queries. The Graph is a decentralized protocol for indexing and querying data from blockchains, making it easier to access blockchain data without having to run a full node.
+## Contents
+- **Node.js Examples**
+  - Using Axios
+  - Using Apollo Client
+- **Python Example**
+  - Using Requests
 
-How It Works
-The code included here showcases the process of querying the Graph network to retrieve specific data from a blockchain. It demonstrates how to construct and execute queries to obtain the desired information.
+## Setup and Running
+### Node.js
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Run Axios example:
+   ```bash
+   npm start
+   ```
 
-### Usage
-To use this code as a reference for querying the Graph network, follow these steps:
+### Python
+1. Install requirements:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Run the example:
+   ```bash
+   python python/requestsExample.py
+   ```
 
-1.) Clone the repository to your local machine.
+## Overview
+The code in this repository demonstrates how to interact with The Graph network by performing queries. The Graph is a decentralized protocol for indexing and querying data from blockchains, making it easier to access blockchain data without having to run a full node.
 
-2.) Review the code files to understand the query examples provided.
+## How It Works
+The code included here showcases the process of querying The Graph network to retrieve specific data from a blockchain. It demonstrates how to construct and execute queries to obtain the desired information.
 
-3.) Modify the queries according to your specific requirements.
+## Usage
+To use this code as a reference for querying The Graph network, follow these steps:
 
-4.) Execute the queries to interact with the Graph network and retrieve the data you need.
+1. Clone the repository to your local machine.
+2. Review the code files to understand the query examples provided.
+3. Modify the queries according to your specific requirements.
+4. Execute the queries to interact with The Graph network and retrieve the data you need.
 
-##### Contribution
+## Contribution
 If you would like to contribute to this example or suggest improvements, feel free to submit a pull request.
 
-##### License
+## License
 This project is licensed under the MIT License.
-
