@@ -1,14 +1,19 @@
 // Import necessary libraries
 const { ApolloClient, InMemoryCache, HttpLink, gql } = require('@apollo/client');
 const fetch = require('node-fetch');
+require('dotenv').config();
 
-// Environment variable for API key
-const API_KEY = process.env.API_KEY;  // Ensure this is set in your environment variables
+// Ensure API_KEY is set in the environment variables
+const API_KEY = process.env.API_KEY;
+if (!API_KEY) {
+  console.error("API_KEY is not set in the environment variables");
+  process.exit(1);
+}
 
 // Create an instance of HttpLink that connects to your GraphQL API
 const link = new HttpLink({
-  uri: `https://gateway-arbitrum.network.thegraph.com/api/${API_KEY}/subgraphs/id/CBf1FtUKFnipwKVm36mHyeMtkuhjmh4KHzY3uWNNq5ow`,
-  fetch: fetch
+  uri: `https://gateway-arbitrum.network.thegraph.com/api/${API_KEY}/subgraphs/id/CBf1FtUKFnipwKVme36mHyeMtkuhjmh4KHzY3uWNNq5ow`,
+  fetch
 });
 
 // Create the Apollo Client instance
@@ -41,7 +46,9 @@ const GET_USER_PROFILES = gql`
   }
 `;
 
-// Execute the query using Apollo Client
+/**
+ * Fetch data from the GraphQL API
+ */
 async function fetchData() {
   try {
     const result = await client.query({
@@ -49,7 +56,7 @@ async function fetchData() {
     });
     console.log(result.data.userProfiles);
   } catch (error) {
-    console.error("Error fetching data: ", error);
+    console.error("Error fetching data: ", error.message);
   }
 }
 
